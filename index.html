@@ -17,8 +17,8 @@
     <header class="header">
 
         <nav class="header__nav-bar">
-            <li><a href=""> Inicio </a></li>
-            <li><a href=""> Contenido </a>
+            <li><a href="#inicio"> Inicio </a></li>
+            <li><a href="#"> Contenido </a>
                 <ul>
                     <li><a href="#metodo-de-biseccion"> Metodo de Biseccion</a></li>
                     <li><a href="#metodo-de-puntofijo"> Metodo de Punto fijo</a></li>
@@ -44,7 +44,7 @@
 
             <header class="sec-principal__header">
 
-                <h2 class="sec-principal__title">
+                <h2 class="sec-principal__title" id="inicio">
                     Blog personal.
                 </h2>
 
@@ -186,16 +186,18 @@
                 </h3>
 
                 <p class="art__text">
-                    El método de bisección, es un método cerrado que se emplea en calculo numérico para determinar en
-                    qué punto se encuentra raíz de una función f. Se le llama método cerrado ya que depende del uso de
-                    un intervalo [xi, xs] (x inferior y x superior) para poder hallar dicha raíz, que no es más que el
-                    punto en que la función f(x) es igual a 0. Este intervalo, claro está, debe contener el punto que
-                    desea encontrar exactitud.
+                    El método de Euler, llamado así en honor a Leonhard Euler, es un procedimiento de integración
+                    numérica para resolver ecuaciones diferenciales ordinarias a partir de un valor inicial dado. El
+                    método de Euler es el más simple de los métodos numéricos para resolver un problema de valor
+                    inicial, y el más simple de los Métodos de Runge-Kutta. El método de Euler es nombrado por Leonhard
+                    Euler, quien lo trató en su libro Institutionum calculi integralis (publicado en 1768-1770).
                 </p>
 
 
 
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/q_WiROrVc0M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/q_WiROrVc0M" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
 
             </article>
 
@@ -204,34 +206,29 @@
 
                 <div class="carousel__contenedor">
 
-                    <button aria-label="anterior" class="carousel__anterior arrow-p-4">
+                    <button aria-label="anterior" class="carousel__anterior">
                         < </button>
 
-                            <div class="carousel__lista-4">
+                            <div class="carousel__lista">
 
                                 <div class="carousel__elemento">
-                                    <img src="./img/1.jpg" alt="1">
-                                    <p>Lorem ipsum dolor sit consectetur.</p>
+                                    <img src="./img/newton.jpg" alt="newton">
+                                    <p>Isaac Newton.</p>
                                 </div>
 
                                 <div class="carousel__elemento">
-                                    <img src="./img/1.jpg" alt="2">
-                                    <p>Lorem ipsum dolor sit consectetur.</p>
+                                    <img src="./img/euler.jpg" alt="euler">
+                                    <p>Leonhard Euler.</p>
                                 </div>
 
                                 <div class="carousel__elemento">
-                                    <img src="./img/1.jpg" alt="3">
-                                    <p>Lorem ipsum dolor sit consectetur.</p>
-                                </div>
-
-                                <div class="carousel__elemento">
-                                    <img src="./img/1.jpg" alt="4">
-                                    <p>Lorem ipsum dolor sit consectetur.</p>
+                                    <img src="./img/universidad-de-margarita.jpg" alt="universidad-margarit">
+                                    <p>Universidad de Margarita.</p>
                                 </div>
 
                             </div>
 
-                            <button aria-label="siguiente" class="carousel__siguiente arrow-n-4">
+                            <button aria-label="siguiente" class="carousel__siguiente">
                                 >
                             </button>
 
@@ -245,7 +242,7 @@
                 <embed src="./musica/bgsound-jazz.mp3" autostard="true" width="300px" height="70px">
             </div>
 
-            
+
 
 
 
@@ -260,24 +257,21 @@
 
         <div class="principal-footer__leyend">
 
-            <h4>Universidad de Margarita</h4>
-            <h4>Alma mater del caribe</h4>
-            <h4>Decanato de Ingenieria y afines</h4>
-            <h4>Calculo Numerico</h4>
-            <br>
-            <h5> Eliezer A Meza - () 2020</h5>
+            <h5> Eliezer A Meza - 2020</h5>
 
         </div>
-
+        <div class="principal-footer">
+            <center>
+                <a href="http://www.websmultimedia.com/contador-de-visitas-gratis" title="Contador De Visitas Gratis">
+                <img style="border: 0px solid; display: inline;" alt="contador de visitas" src="http://www.websmultimedia.com/contador-de-visitas.php?id=286601">
+            </center>
+        </div>
         <div class="principal-footer__social-bar">
 
-            <a href="">
+            <a href="https://www.facebook.com/profile.php?id=100017661783633">
                 <img class="social-bar__img" src="./img/facebook.png" alt="facebook">
             </a>
 
-            <a href="">
-                <img class="social-bar__img" src="./img/twitter.png" alt="facebook">
-            </a>
 
         </div>
 
