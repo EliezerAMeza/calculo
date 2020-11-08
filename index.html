@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./recursos/fontawesome-free-5.13.0-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./css/general.css">
+    <title>Inicio</title>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <nav class="header__nav-bar">
+            <li><a href=""> Inicio </a></li>
+            <li><a href=""> Contenido </a>
+                <ul>
+                    <li><a href="#metodo-de-biseccion"> Metodo de Biseccion</a></li>
+                    <li><a href="#metodo-de-puntofijo"> Metodo de Punto fijo</a></li>
+                    <li><a href="#metodo-de-newtonraphson"> Metodo de Newton-Raphson</a></li>
+                    <li><a href="#metodo-de-euler"> Metodo de Euler</a></li>
+                </ul>
+            </li>
+            <li><a href="#footer"> Acerca de </a></li>
+        </nav>
+
+        <picture class="header__logo">
+            <a href="http://www.unimar.edu.ve/unimarportal/index.php">
+                <img src="./img/logo-unimar.bmp" alt="Logo-Unimar">
+            </a>
+        </picture>
+
+    </header>
+
+
+    <main class="main">
+
+        <section class="main__sec-principal">
+
+            <header class="sec-principal__header">
+
+                <h2 class="sec-principal__title">
+                    Blog personal.
+                </h2>
+
+                <h3 class="sec-principal__sub-title">
+                    4ta evaluación. 10%.
+                </h3>
+
+            </header>
+
+            <article class="sec-principal__info">
+
+                <img src="./img/yo.jpeg" alt="Yo" class="info__yo">
+
+                <div class="info__text">
+                    <p>
+                        Mi nombre es Eliezer Alejandro Meza, estudiante de Ingeniería en sistemas en la
+                        <strong>Universidad de Margarita</strong>,
+                        una universidad radicada en el estado Nueva Esparta, Venezuela.
+                    </p>
+                    <br><br>
+                    <p>
+                        Actualmente, me encuentro cursando el séptimo trimestre, y la presenta página corresponde a una
+                        asignación de la materia de Calculo Numérico. A continuación, se mostrara un pequeño resumen del
+                        temario visto hasta el momento en la materia.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <section class="main__sec-information">
+
+            <article class="sec-information__art">
+
+                <h3 class="art__title" id="metodo-de-biseccion">
+                    Metodo de Biseccion.
+                </h3>
+
+                <p class="art__text">
+                    El método de bisección, es un método cerrado que se emplea en calculo numérico para determinar en
+                    qué punto se encuentra raíz de una función f. Se le llama método cerrado ya que depende del uso de
+                    un intervalo [xi, xs] (x inferior y x superior) para poder hallar dicha raíz, que no es más que el
+                    punto en que la función f(x) es igual a 0. Este intervalo, claro está, debe contener el punto que
+                    desea encontrar exactitud.
+                </p>
+
+                <p class="art__text">
+                    Como datos para poder aplicar este método, además del mencionado intervalo [xi, xs], también debemos
+                    considerar xa (x aproximada) la cual resultada de la siguiente formula: <strong>𝑥𝑎 = (xi + xs) /
+                        2</strong>
+                </p>
+
+                <p class="art__text">
+                    El algoritmo que emplea el método de la bisección es realmente sencillo, pero efectivo, consiste en
+                    evaluar la función f en los puntos xi y xa, y multiplicar el resultado de dicha evaluación, esto
+                    dentro de un suerte de bucle o proceso iterativo, para determinar cuál punto (si xi o xs) serán
+                    sustituidos para la siguiente iteración.
+                </p>
+
+                <p class="art__text centrado">
+                    Si 𝑓(𝑥𝑖).𝑓(𝑥𝑎) > 0 Se sustituye xi. <br>
+                    Si 𝑓(𝑥𝑖).𝑓(𝑥𝑎) < 0 Se sustituye xs. </p>
+
+                        <p class="art__text">
+                            De este modo, con cada iteración el intervalo [xi, xs] se va haciendo cada vez más corto,
+                            después de una
+                            cuantas iteraciones (mas de 10, por lo general y si no se tiene un intervalo bastante
+                            preciso) se puede
+                            obtener una aproximación del valor de la raíz de la función f bastante preciso en f(xa).
+                        </p>
+
+                        <img src="./img/metodo-biseccion.bmp" alt="ejemplo-metodo-b">
+
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/m6uahP62olo" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+
+            </article>
+
+            <article class="sec-information__art">
+
+                <h3 class="art__title" id="metodo-de-puntofijo">
+                    Metodo de punto fijo
+                </h3>
+
+                <p class="art__text">
+                    El método de punto fijo es un método abierto para el cálculo de raíces, si bien, al igual que el
+                    método anterior requiere de un intervalo [xi, xs] que contenga la raíz, este es exclusivamente para
+                    la obtención de xa, y luego de ello no se vuelve a tomar en cuenta el intervalo.
+                </p>
+
+                <p class="art__text">
+                    El primer paso, como ya se dije, es obtener el primer xa. El segundo, consiste en realizar el
+                    despeje de x en la función f, y de ese modo obtener la denominada función g. En caso de que exista
+                    más de un despeje posible para x, el método para determinar cuál g(x) es la que nos será de utilidad
+                    es el siguiente: se obtiene la derivada de cada g(x) y se evalúa en el punto xa, aquel g(x) que
+                    satisfaga la expresión |𝑔’(𝑥𝑎)| > 1 será la que nos sea de utilidad. El tercer paso consiste en
+                    evaluar la función g(x) en xa, y sustituir el valor de xa por el de g(xa) en la siguiente
+                    interacción.
+                </p>
+
+                <img src="./img/metodo-punto-fijo.bmp" alt="ejemplo-metodo-pf">
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/yZGUG2yfSDI" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+
+            </article>
+
+            <article class="sec-information__art">
+
+                <h3 class="art__title" id="metodo-de-newtonraphson">
+                    Metodo de Newton-Raphson
+                </h3>
+
+                <p class="art__text">
+                    El método de Newton presenta características considerablemente diferentes a los dos métodos
+                    anteriormente explicados, principalmente porque no depende de un intervalo, sino solamente de un
+                    punto, que bien puede no ser tan cercano a la raíz, y a partir de allí, nuevamente por un proceso
+                    iterativo, va acercándose. La fórmula que rige el método es la siguiente:
+                </p>
+
+                <img src="./img/nr-ejemplo.bmp" alt="nr-ejemplos" class="ejemplo-nr">
+
+                <img src="./img/metodo-punto-fijo.bmp" alt="jemplo-metodo-nr">
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/tX9ecFstUUk" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+
+            </article>
+
+            <article class="sec-information__art">
+
+                <h3 class="art__title" id="metodo-de-euler">
+                    Metodo de Euler
+                </h3>
+
+                <p class="art__text">
+                    El método de bisección, es un método cerrado que se emplea en calculo numérico para determinar en
+                    qué punto se encuentra raíz de una función f. Se le llama método cerrado ya que depende del uso de
+                    un intervalo [xi, xs] (x inferior y x superior) para poder hallar dicha raíz, que no es más que el
+                    punto en que la función f(x) es igual a 0. Este intervalo, claro está, debe contener el punto que
+                    desea encontrar exactitud.
+                </p>
+
+
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/q_WiROrVc0M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            </article>
+
+
+            <div class="carousel">
+
+                <div class="carousel__contenedor">
+
+                    <button aria-label="anterior" class="carousel__anterior arrow-p-4">
+                        < </button>
+
+                            <div class="carousel__lista-4">
+
+                                <div class="carousel__elemento">
+                                    <img src="./img/1.jpg" alt="1">
+                                    <p>Lorem ipsum dolor sit consectetur.</p>
+                                </div>
+
+                                <div class="carousel__elemento">
+                                    <img src="./img/1.jpg" alt="2">
+                                    <p>Lorem ipsum dolor sit consectetur.</p>
+                                </div>
+
+                                <div class="carousel__elemento">
+                                    <img src="./img/1.jpg" alt="3">
+                                    <p>Lorem ipsum dolor sit consectetur.</p>
+                                </div>
+
+                                <div class="carousel__elemento">
+                                    <img src="./img/1.jpg" alt="4">
+                                    <p>Lorem ipsum dolor sit consectetur.</p>
+                                </div>
+
+                            </div>
+
+                            <button aria-label="siguiente" class="carousel__siguiente arrow-n-4">
+                                >
+                            </button>
+
+                </div>
+
+                <div class="carousel__indicadores" role="tablist"></div>
+
+            </div>
+
+            <div class="content-music">
+                <embed src="./musica/bgsound-jazz.mp3" autostard="true" width="300px" height="70px">
+            </div>
+
+            
+
+
+
+        </section>
+
+
+
+    </main>
+
+
+    <footer class="principal-footer" id="footer">
+
+        <div class="principal-footer__leyend">
+
+            <h4>Universidad de Margarita</h4>
+            <h4>Alma mater del caribe</h4>
+            <h4>Decanato de Ingenieria y afines</h4>
+            <h4>Calculo Numerico</h4>
+            <br>
+            <h5> Eliezer A Meza - () 2020</h5>
+
+        </div>
+
+        <div class="principal-footer__social-bar">
+
+            <a href="">
+                <img class="social-bar__img" src="./img/facebook.png" alt="facebook">
+            </a>
+
+            <a href="">
+                <img class="social-bar__img" src="./img/twitter.png" alt="facebook">
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+    <script src="./recursos/fontawesome-free-5.13.0-web/js/all.min.js"></script>
+    <script src="./js/control-glider.js"></script>
+
+</body>
+
+</html>
