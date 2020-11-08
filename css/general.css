@@ -313,7 +313,7 @@ iframe{
 }
 
 .principal-footer__leyend{
-    width: 40%;
+    width: 30%;
     color: whitesmoke;
     font-size: 2rem;
     text-shadow: 0 0 3px black;
@@ -323,8 +323,15 @@ iframe{
     flex-direction: column;
 }
 
-.principal-footer__social-bar{
+.principal-footer__contador{
     width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.principal-footer__social-bar{
+    width: 30%;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
